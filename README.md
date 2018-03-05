@@ -1,2 +1,2 @@
-# Varausj-rjestelm-
+# Varaus Järjestelmä
 OOP Harjoitustyö
