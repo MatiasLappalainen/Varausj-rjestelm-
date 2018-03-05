@@ -1,2 +1,0 @@
-# Varaus Järjestelmä
-OOP Harjoitustyö
