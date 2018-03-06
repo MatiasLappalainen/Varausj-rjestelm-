@@ -4,19 +4,31 @@ public class Main {
 
     Asema asema;
 
-    public ArrayList<Asema> paikat;
+    public ArrayList<Asema> asemat;
     public ArrayList<String> Kaupungit = new ArrayList<>(Arrays.asList("Helsinki", "Hämeenlinna", "Joensuu", "Jyväskylä", "Kajaani"));
 
-    // Tee randomina muutama yhteys asemille
+    //Constructor
+    public Main(){
+
+        asemat = new ArrayList<>();
+
+        for(String k : Kaupungit){
+            asemat.add(new Asema(k, randomYhteydet()));
+        }
+        // Kutsu init
+        init();
+    }
+
+    // Tee randomina muutama yhteys asemien välille
     public ArrayList randomYhteydet(){
         Random r = new Random();
 
         List<String> kaupungitList = new LinkedList<>(Kaupungit);
-        ArrayList<String> yhteydet = new ArrayList<>();
+        ArrayList<PääteAsema> yhteydet = new ArrayList<>();
 
         for(int i = 0; i < 3; i++){
             int random = r.nextInt(kaupungitList.size());
-            yhteydet.add(kaupungitList.get(random));
+            yhteydet.add(new PääteAsema(kaupungitList.get(random)));
             kaupungitList.remove(kaupungitList.get(random));
         }
 
@@ -24,17 +36,6 @@ public class Main {
         return yhteydet;
     }
 
-    public Main(){
-
-        paikat = new ArrayList<>();
-        ArrayList<String> yhteydet;
-
-        for(String k : Kaupungit){
-            paikat.add(new Asema(k, randomYhteydet()));
-        }
-
-        init();
-    }
     // ns main metodi
     public void init(){
         Askel askel = new Askel();
@@ -42,20 +43,18 @@ public class Main {
         Asema asema  = new Asema("Helsinki", randomYhteydet());
         int lahto = 0;
         int maaranpaa = 0;
+        // Ohjelman tila eli katsoo askeleen ja menee sitä mukaan ohjelmassa eteenpäin methodilla lisaaAskel
         switch(askel.annaAskel()){
             case 0:
-                lahto = varaus.asetaLahto(paikat);
+                lahto = varaus.asetaLahto(asemat);
                 askel.lisaaAskel();
             case 1:
-                maaranpaa = varaus.asetaMaaranpaa(paikat, lahto);
+                maaranpaa = varaus.asetaMaaranpaa(asemat, lahto);
                 askel.lisaaAskel();
             case 2:
-                System.out.println("Lähtö: " + paikat.get(lahto).annaNimi() + ", Määränpää: " + paikat.get(lahto).annaYhteydet().get(maaranpaa));
+                System.out.println("Lähtö: " + asemat.get(lahto).annaNimi() + ", Määränpää: " + asemat.get(lahto).annaYhteydet().get(maaranpaa).annaNimi());
                 askel.lisaaAskel();
-            case 3:
-                for(String s : asema.annaAikataulut()) {
-                    System.out.println(s);
-                }
+
 
         }
     }
