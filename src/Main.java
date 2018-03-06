@@ -52,7 +52,10 @@ public class Main {
                 maaranpaa = varaus.asetaMaaranpaa(asemat, lahto);
                 askel.lisaaAskel();
             case 2:
-                System.out.println("Lähtö: " + asemat.get(lahto).annaNimi() + ", Määränpää: " + asemat.get(lahto).annaYhteydet().get(maaranpaa).annaNimi());
+                System.out.printf("Lähtö: %s, Määränpää: %s%n", asemat.get(lahto).annaNimi(), asemat.get(lahto)
+                        .annaYhteydet()
+                        .get(maaranpaa)
+                        .annaNimi());
                 askel.lisaaAskel();
 
 
