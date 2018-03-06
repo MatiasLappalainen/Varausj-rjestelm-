@@ -41,7 +41,7 @@ public class Varaus {
 
         while(true) {
             for (int i = 0; i < asemat.get(lahto).annaYhteydet().size(); i++) {
-                System.out.println(i + ": " + asemat.get(lahto).annaYhteydet().get(i));
+                System.out.println(i + ": " + asemat.get(lahto).annaYhteydet().get(i).annaNimi());
             }
 
             int mp = in.nextInt();

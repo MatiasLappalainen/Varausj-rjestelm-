@@ -11,7 +11,6 @@ public class Main {
     public Main(){
 
         asemat = new ArrayList<>();
-        ArrayList<String> yhteydet;
 
         for(String k : Kaupungit){
             asemat.add(new Asema(k, randomYhteydet()));
@@ -25,11 +24,11 @@ public class Main {
         Random r = new Random();
 
         List<String> kaupungitList = new LinkedList<>(Kaupungit);
-        ArrayList<String> yhteydet = new ArrayList<>();
+        ArrayList<PääteAsema> yhteydet = new ArrayList<>();
 
         for(int i = 0; i < 3; i++){
             int random = r.nextInt(kaupungitList.size());
-            yhteydet.add(kaupungitList.get(random));
+            yhteydet.add(new PääteAsema(kaupungitList.get(random)));
             kaupungitList.remove(kaupungitList.get(random));
         }
 
@@ -53,7 +52,7 @@ public class Main {
                 maaranpaa = varaus.asetaMaaranpaa(asemat, lahto);
                 askel.lisaaAskel();
             case 2:
-                System.out.println("Lähtö: " + asemat.get(lahto).annaNimi() + ", Määränpää: " + asemat.get(lahto).annaYhteydet().get(maaranpaa));
+                System.out.println("Lähtö: " + asemat.get(lahto).annaNimi() + ", Määränpää: " + asemat.get(lahto).annaYhteydet().get(maaranpaa).annaNimi());
                 askel.lisaaAskel();
 
 
