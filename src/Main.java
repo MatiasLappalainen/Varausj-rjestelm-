@@ -55,10 +55,5 @@ public class Main {
 
     public static void main(String[] args){
         new Main();
-        Scanner sc = new Scanner();
-        System.out.println("Tervetuloa varausjarjestelmaan! Syota lahtopaikka");
-        String start = sc.nextLine();
-        System.out.println("Syota matkakohde");
-        String target = sc.nextLine();
     }
 }
