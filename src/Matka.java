@@ -10,7 +10,7 @@ public class Matka {
     public int maara;
 
     ArrayList<Integer> istumapaikka;
-
+    //Matka tallennetaan loppujenlopuksi tiedostoon varaukset.txt?
     public Matka(int lahto, int maaranpaa, String aika, int maara, ArrayList istumapaikka){
         this.lahto = lahto;
         this.maaranpaa = maaranpaa;
@@ -18,6 +18,5 @@ public class Matka {
         this.maara = maara;
         this.istumapaikka = istumapaikka;
     }
-
 
 }

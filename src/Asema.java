@@ -23,18 +23,17 @@ public class Asema {
     public ArrayList<String> annaYhteydet(){
         return yhteydet;
     }
-    public void listAll() {
-        for(String k : yhteydet){
-            System.out.println(k);
-        }
-    }
+
 
     public ArrayList<String> annaAikataulut(){
         return Aikataulut;
     }
 
+    /**
+     * Tekee arrayn tiedostosta joka sisältää aikataulut
+     * @return
+     */
     public ArrayList parseAikataulut(){
-
 
         ArrayList<String> list = new ArrayList<String>();
         try {
