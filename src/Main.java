@@ -7,6 +7,7 @@ public class Main {
     public ArrayList<Asema> paikat;
     public ArrayList<String> Kaupungit = new ArrayList<>(Arrays.asList("Helsinki", "Hämeenlinna", "Joensuu", "Jyväskylä", "Kajaani"));
 
+    // Tee randomina muutama yhteys asemille
     public ArrayList randomYhteydet(){
         Random r = new Random();
 
@@ -34,10 +35,11 @@ public class Main {
 
         init();
     }
-
+    // ns main metodi
     public void init(){
         Askel askel = new Askel();
         Varaus varaus = new Varaus();
+        Asema asema  = new Asema("Helsinki", randomYhteydet());
         int lahto = 0;
         int maaranpaa = 0;
         switch(askel.annaAskel()){
@@ -50,6 +52,11 @@ public class Main {
             case 2:
                 System.out.println("Lähtö: " + paikat.get(lahto).annaNimi() + ", Määränpää: " + paikat.get(lahto).annaYhteydet().get(maaranpaa));
                 askel.lisaaAskel();
+            case 3:
+                for(String s : asema.annaAikataulut()) {
+                    System.out.println(s);
+                }
+
         }
     }
 
