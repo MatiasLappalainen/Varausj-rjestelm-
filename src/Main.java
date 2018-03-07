@@ -53,11 +53,12 @@ public class Main {
                 matka.asetaMaaranpaa(maaranpaa);
                 askel.lisaaAskel();
             case 2:
-                matka.asetaAika(varaus.asetaAika(lahto));
+                matka.asetaAika(varaus.asetaAika(lahto, maaranpaa));
                 askel.lisaaAskel();
             case 3:
-                System.out.printf("Lähtö: %s, Määränpää: %s%n, Aika: %s%n", lahto.annaNimi(), maaranpaa.annaNimi(), matka.annaAika());
+                System.out.printf("Lähtö: %s, Määränpää: %s%n, Aika: %s", lahto.annaNimi(), maaranpaa.annaNimi(), matka.annaAika());
                 askel.lisaaAskel();
+
 
         }
     }
