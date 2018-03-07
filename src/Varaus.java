@@ -55,9 +55,10 @@ public class Varaus {
         }
     }
 
-    public String asetaAika(Asema asema){
+    public String asetaAika(Asema asema, Asema pasema){
         in = new Scanner(System.in);
-        ArrayList<String> aikataulut = asema.parseAikataulut("helsinki");
+        System.out.println(asema.annaNimi() + " ... " + pasema.annaNimi());
+        ArrayList<String> aikataulut = asema.haeAikataulut("./src/aikataulut/" + asema.annaNimi() + ".txt", pasema.annaNimi());
 
         while (true) {
             for(int i = 0; i < aikataulut.size(); i++){

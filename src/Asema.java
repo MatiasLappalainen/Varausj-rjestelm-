@@ -27,33 +27,31 @@ public class Asema {
         return yhteydet;
     }
 
-    public ArrayList<String> annaAikataulut(){
-        return Aikataulut;
-    }
-
-    public void setAikataulut(String nimi) {
-        this.Aikataulut = parseAikataulut(nimi);
-    }
 
     /**
      * Tekee arrayn tiedostosta joka sisältää aikataulut
      * @return
      */
-    public ArrayList parseAikataulut(String nimi){
 
-        ArrayList<String> list = new ArrayList<String>();
+    public ArrayList haeAikataulut(String path, String tunniste){
+        ArrayList<String> aikataulut = new ArrayList<>();
+
         try {
-            Scanner s = new Scanner(new File("./src/" + nimi + ".txt"));
-            while (s.hasNext()) {
-                list.add(s.next());
+            Scanner sc = new Scanner(new File(path));
+            boolean found = false;
+            while(sc.hasNext()) {
+                String value = sc.next();
+                if(value.equalsIgnoreCase(tunniste)){
+                    found = true;
+                }else if(value.equalsIgnoreCase("s")){
+                    found =false;
+                }else if(found == true){
+                    aikataulut.add(value);
+                }
             }
-            s.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch(FileNotFoundException ie){
+            ie.printStackTrace();
         }
-        return list;
+        return aikataulut;
     }
-
-
-
 }
