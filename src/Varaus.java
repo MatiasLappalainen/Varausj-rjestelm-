@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Varaus {
     Scanner in;
 
+    Matka matka = new Matka();
+
     private void listaaAsemat(ArrayList<Asema> asemat){
         int i = 0;
         for(Asema n : asemat){
@@ -16,7 +18,7 @@ public class Varaus {
      * @param asemat
      * @return
      */
-    public int asetaLahto(ArrayList<Asema> asemat) {
+    public Asema asetaLahto(ArrayList<Asema> asemat) {
         in = new Scanner(System.in);
 
         while(true) {
@@ -25,7 +27,7 @@ public class Varaus {
             if(lahto > asemat.size()-1 || lahto < 0){
                 System.out.println("Valitse Lähtöpaikka");
                 continue;
-            }else return lahto;
+            }else return asemat.get(lahto);
 
         }
     }
@@ -36,20 +38,34 @@ public class Varaus {
      * @param lahto
      * @return
      */
-    public int asetaMaaranpaa(ArrayList<Asema> asemat, int lahto) {
+    public Asema asetaMaaranpaa(ArrayList<Asema> asemat, Asema lahto) {
         in = new Scanner(System.in);
 
         while(true) {
-            for (int i = 0; i < asemat.get(lahto).annaYhteydet().size(); i++) {
-                System.out.println(i + ": " + asemat.get(lahto).annaYhteydet().get(i).annaNimi());
+            for (int i = 0; i < lahto.annaYhteydet().size(); i++) {
+                System.out.println(i + ": " + lahto.annaYhteydet().get(i).annaNimi());
             }
 
             int mp = in.nextInt();
-            if(mp > asemat.get(lahto).annaYhteydet().size()-1 || mp < 0){
+            if(mp > lahto.annaYhteydet().size()-1 || mp < 0){
                 System.out.println("Valitse Määränpää: ");
                 continue;
             }else
-            return mp;
+            return lahto.annaYhteydet().get(mp);
+        }
+    }
+
+    public String asetaAika(Asema asema){
+        in = new Scanner(System.in);
+        ArrayList<String> aikataulut = asema.parseAikataulut("helsinki");
+
+        while (true) {
+            for(int i = 0; i < aikataulut.size(); i++){
+                System.out.println(i + ": " + aikataulut.get(i));
+            }
+
+            int aika = in.nextInt();
+            return aikataulut.get(aika);
         }
     }
 }

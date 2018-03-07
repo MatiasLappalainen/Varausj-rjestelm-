@@ -12,8 +12,11 @@ public class Asema {
 
     public Asema(String nimi, ArrayList yhteydet){
         this.nimi = nimi;
-        this.Aikataulut = parseAikataulut();
         this.yhteydet = yhteydet;
+    }
+
+    public Asema(){
+        this.nimi = "";
     }
 
     public String annaNimi(){
@@ -28,15 +31,19 @@ public class Asema {
         return Aikataulut;
     }
 
+    public void setAikataulut(String nimi) {
+        this.Aikataulut = parseAikataulut(nimi);
+    }
+
     /**
      * Tekee arrayn tiedostosta joka sisältää aikataulut
      * @return
      */
-    public ArrayList parseAikataulut(){
+    public ArrayList parseAikataulut(String nimi){
 
         ArrayList<String> list = new ArrayList<String>();
         try {
-            Scanner s = new Scanner(new File("./src/helsinki.txt"));
+            Scanner s = new Scanner(new File("./src/" + nimi + ".txt"));
             while (s.hasNext()) {
                 list.add(s.next());
             }
@@ -46,5 +53,7 @@ public class Asema {
         }
         return list;
     }
+
+
 
 }
