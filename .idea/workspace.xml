@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb91f91c-e29f-4b95-940e-2a7d9daf7db3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Asema.java" afterPath="$PROJECT_DIR$/src/Asema.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/PääteAsema.java" afterPath="$PROJECT_DIR$/src/PääteAsema.java" />
-      <change beforePath="$PROJECT_DIR$/src/Varaus.java" afterPath="$PROJECT_DIR$/src/Varaus.java" />
+      <change beforePath="$PROJECT_DIR$/src/aikataulut/Hämeenlinna.txt" afterPath="$PROJECT_DIR$/src/aikataulut/Hämeenlinna.txt" />
+      <change beforePath="$PROJECT_DIR$/src/aikataulut/Joensuu.txt" afterPath="$PROJECT_DIR$/src/aikataulut/Joensuu.txt" />
+      <change beforePath="$PROJECT_DIR$/src/aikataulut/Jyväskylä.txt" afterPath="$PROJECT_DIR$/src/aikataulut/Jyväskylä.txt" />
+      <change beforePath="$PROJECT_DIR$/src/aikataulut/Kajaani.txt" afterPath="$PROJECT_DIR$/src/aikataulut/Kajaani.txt" />
+      <change beforePath="$PROJECT_DIR$/src/aikataulut/Kouvola.txt" afterPath="$PROJECT_DIR$/src/aikataulut/Kouvola.txt" />
+      <change beforePath="$PROJECT_DIR$/src/aikataulut/Rovaniemi.txt" afterPath="$PROJECT_DIR$/src/aikataulut/Rovaniemi.txt" />
+      <change beforePath="$PROJECT_DIR$/src/aikataulut/Turku.txt" afterPath="$PROJECT_DIR$/src/aikataulut/Turku.txt" />
       <change beforePath="$PROJECT_DIR$/src/aikataulut/helsinki.txt" afterPath="$PROJECT_DIR$/src/aikataulut/helsinki.txt" />
-      <change beforePath="$PROJECT_DIR$/src/helsinki.txt" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,8 +64,8 @@
       <file leaf-file-name="helsinki.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aikataulut/helsinki.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="103" selection-end-column="1" />
+            <state relative-caret-position="648">
+              <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -73,8 +74,8 @@
       <file leaf-file-name="Jyväskylä.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aikataulut/Jyväskylä.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="41" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="1" />
+            <state relative-caret-position="1980">
+              <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -83,8 +84,8 @@
       <file leaf-file-name="Kajaani.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aikataulut/Kajaani.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="54" column="7" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
+            <state relative-caret-position="1980">
+              <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -93,28 +94,28 @@
       <file leaf-file-name="Kouvola.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aikataulut/Kouvola.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="1980">
+              <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Turku.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Turku.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/aikataulut/Turku.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="80" column="9" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="9" />
+            <state relative-caret-position="1980">
+              <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rovaniemi.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Rovaniemi.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aikataulut/Rovaniemi.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="626">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+              <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -123,8 +124,8 @@
       <file leaf-file-name="Joensuu.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aikataulut/Joensuu.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="2002">
+              <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -133,8 +134,8 @@
       <file leaf-file-name="Hämeenlinna.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aikataulut/Hämeenlinna.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1046">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="2002">
+              <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -172,14 +173,14 @@
         <option value="$PROJECT_DIR$/src/Varaus.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Asema.java" />
-        <option value="$PROJECT_DIR$/src/aikataulut/Hämeenlinna.txt" />
         <option value="$PROJECT_DIR$/src/aikataulut/helsinki.txt" />
+        <option value="$PROJECT_DIR$/src/aikataulut/Hämeenlinna.txt" />
         <option value="$PROJECT_DIR$/src/aikataulut/Joensuu.txt" />
         <option value="$PROJECT_DIR$/src/aikataulut/Jyväskylä.txt" />
         <option value="$PROJECT_DIR$/src/aikataulut/Kajaani.txt" />
         <option value="$PROJECT_DIR$/src/aikataulut/Kouvola.txt" />
-        <option value="$PROJECT_DIR$/src/aikataulut/Turku.txt" />
         <option value="$PROJECT_DIR$/src/aikataulut/Rovaniemi.txt" />
+        <option value="$PROJECT_DIR$/src/aikataulut/Turku.txt" />
       </list>
     </option>
   </component>
@@ -387,12 +388,12 @@
       <workItem from="1520361676967" duration="79000" />
       <workItem from="1520361807731" duration="15762000" />
       <workItem from="1520410494648" duration="2824000" />
-      <workItem from="1520454660711" duration="7281000" />
+      <workItem from="1520454660711" duration="8125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30762000" />
+    <option name="totallyTimeSpent" value="31606000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1216" extended-state="6" />
@@ -927,58 +928,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aikataulut/Hämeenlinna.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1046">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aikataulut/Joensuu.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aikataulut/Jyväskylä.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="41" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aikataulut/Kajaani.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="54" column="7" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aikataulut/Kouvola.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aikataulut/Turku.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="80" column="9" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aikataulut/helsinki.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="103" selection-end-column="1" />
+        <state relative-caret-position="648">
+          <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -986,7 +939,55 @@
     <entry file="file://$PROJECT_DIR$/src/aikataulut/Rovaniemi.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+          <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aikataulut/Kouvola.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aikataulut/Kajaani.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aikataulut/Jyväskylä.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aikataulut/Joensuu.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2002">
+          <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aikataulut/Hämeenlinna.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2002">
+          <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aikataulut/Turku.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
           <folding />
         </state>
       </provider>
