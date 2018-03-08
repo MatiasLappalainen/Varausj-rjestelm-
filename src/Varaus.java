@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Varaus {
     Scanner in;
@@ -23,12 +25,15 @@ public class Varaus {
 
         while(true) {
             listaaAsemat(asemat);
-            int lahto = in.nextInt();
-            if(lahto > asemat.size()-1 || lahto < 0){
-                System.out.println("Valitse Lähtöpaikka");
-                continue;
-            }else return asemat.get(lahto);
-
+            try {
+                int lahto = in.nextInt();
+                if (lahto > asemat.size() - 1 || lahto < 0) {
+                    System.out.println("Valitse Lähtöpaikka");
+                    continue;
+                } else return asemat.get(lahto);
+            } catch(InputMismatchException ex) {
+                in.nextLine();
+            }
         }
     }
 
@@ -42,17 +47,21 @@ public class Varaus {
         in = new Scanner(System.in);
 
         while(true) {
-            for (int i = 0; i < lahto.annaYhteydet().size(); i++) {
-                System.out.println(i + ": " + lahto.annaYhteydet().get(i).annaNimi());
-            }
+            ArrayList<PääteAsema> yhteydet = lahto.getYhteydet();
+            for (int i = 0; i < yhteydet.size(); i++)
+                System.out.println(i + ": " + yhteydet.get(i).annaNimi());
+            try {
+                int mp = in.nextInt();
+                if (mp > yhteydet.size() - 1 || mp < 0) {
+                    System.out.println("Valitse Määränpää: ");
+                    continue;
 
-            int mp = in.nextInt();
-            if(mp > lahto.annaYhteydet().size()-1 || mp < 0){
-                System.out.println("Valitse Määränpää: ");
-                continue;
-            }else
-            return lahto.annaYhteydet().get(mp);
-        }
+                } else
+                    return yhteydet.get(mp);
+            } catch(InputMismatchException ex){
+                in.nextLine();
+            }
+            }
     }
 
     public String asetaAika(Asema asema, Asema pasema){
@@ -61,12 +70,16 @@ public class Varaus {
         ArrayList<String> aikataulut = asema.haeAikataulut("./src/aikataulut/" + asema.annaNimi() + ".txt", pasema.annaNimi());
 
         while (true) {
-            for(int i = 0; i < aikataulut.size(); i++){
-                System.out.println(i + ": " + aikataulut.get(i));
-            }
+            try {
+                for (int i = 0; i < aikataulut.size(); i++) {
+                    System.out.println(i + ": " + aikataulut.get(i));
+                }
 
-            int aika = in.nextInt();
-            return aikataulut.get(aika);
-        }
+                int aika = in.nextInt();
+                return aikataulut.get(aika);
+            } catch(InputMismatchException ex){
+                in.nextLine();
+            }
+            }
     }
 }

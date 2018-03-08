@@ -12,26 +12,10 @@ public class Main {
         asemat = new ArrayList<>();
 
         for(String k : Kaupungit){
-            asemat.add(new Asema(k, randomYhteydet()));
+            asemat.add(new Asema(k));
         }
         // Kutsu init
         init();
-    }
-
-    // Tee randomina muutama yhteys asemien välille
-    public ArrayList randomYhteydet(){
-        Random r = new Random();
-
-        List<String> kaupungitList = new LinkedList<>(Kaupungit);
-        ArrayList<PääteAsema> yhteydet = new ArrayList<>();
-
-        for(int i = 0; i < 3; i++){
-            int random = r.nextInt(kaupungitList.size());
-            yhteydet.add(new PääteAsema(kaupungitList.get(random)));
-            kaupungitList.remove(kaupungitList.get(random));
-        }
-
-        return yhteydet;
     }
 
     // ns main metodi
