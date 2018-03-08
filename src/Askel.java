@@ -1,5 +1,5 @@
 public class Askel {
-    int askel;
+    private int askel;
 
     public Askel(){
         this.askel = 0;
