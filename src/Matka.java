@@ -1,30 +1,19 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Matka {
 
-    public Asema lahto;
-    public Asema maaranpaa;
+    private Asema lahto;
+    private Asema maaranpaa;
 
-    public String aika;
+    private String aika;
 
-    public int maara;
+    private int maara;
 
-    List<Integer> istumapaikka;
+    private int istumapaikka;
+
     //Matka tallennetaan loppujenlopuksi tiedostoon varaukset.txt?
-    public Matka(Asema lahto, Asema maaranpaa, String aika, int maara, ArrayList istumapaikka){
-        this.lahto = lahto;
-        this.maaranpaa = maaranpaa;
-        this.aika = aika;
-        this.maara = maara;
-        this.istumapaikka = istumapaikka;
-    }
-
     public Matka(){
         this.aika = "";
         this.maara = 0;
-        this.istumapaikka = Arrays.asList(1, 2);
+        this.istumapaikka = 1;
     }
 
     public void asetaLahto(Asema lahto){
@@ -43,8 +32,12 @@ public class Matka {
         this.maara = maara;
     }
 
-    public void asetaIstumapaikka(List istumapaikka) {
+    public void asetaIstumapaikka(int istumapaikka) {
         this.istumapaikka = istumapaikka;
+    }
+
+    public int annaIstumapaikka(){
+        return this.istumapaikka;
     }
 
     public String annaAika(){

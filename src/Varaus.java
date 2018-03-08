@@ -1,12 +1,9 @@
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
-public class Varaus {
-    Scanner in;
-
-    Matka matka = new Matka();
+class Varaus {
+    private Scanner in;
 
     private void listaaAsemat(ArrayList<Asema> asemat){
         int i = 0;
@@ -29,7 +26,6 @@ public class Varaus {
                 int lahto = in.nextInt();
                 if (lahto > asemat.size() - 1 || lahto < 0) {
                     System.out.println("Valitse Lähtöpaikka");
-                    continue;
                 } else return asemat.get(lahto);
             } catch(InputMismatchException ex) {
                 in.nextLine();
@@ -39,22 +35,20 @@ public class Varaus {
 
     /**
      * Kysyy käyttäjältä niin kauan arvoa kunnes arvo on rajojen sisäpuolella
-     * @param asemat
      * @param lahto
      * @return
      */
-    public Asema asetaMaaranpaa(ArrayList<Asema> asemat, Asema lahto) {
+    public Asema asetaMaaranpaa(Asema lahto) {
         in = new Scanner(System.in);
 
         while(true) {
-            ArrayList<PääteAsema> yhteydet = lahto.getYhteydet();
+            ArrayList<PaateAsema> yhteydet = lahto.getYhteydet();
             for (int i = 0; i < yhteydet.size(); i++)
                 System.out.println(i + ": " + yhteydet.get(i).annaNimi());
             try {
                 int mp = in.nextInt();
                 if (mp > yhteydet.size() - 1 || mp < 0) {
                     System.out.println("Valitse Määränpää: ");
-                    continue;
 
                 } else
                     return yhteydet.get(mp);
@@ -67,7 +61,7 @@ public class Varaus {
     public String asetaAika(Asema asema, Asema pasema){
         in = new Scanner(System.in);
         System.out.println(asema.annaNimi() + " ... " + pasema.annaNimi());
-        ArrayList<String> aikataulut = asema.haeAikataulut("./src/aikataulut/" + asema.annaNimi() + ".txt", pasema.annaNimi());
+        ArrayList<String> aikataulut = asema.haeAikataulut(pasema.annaNimi());
 
         while (true) {
             try {
@@ -82,4 +76,27 @@ public class Varaus {
             }
             }
     }
+    public int getIstumapaikka(Juna juna){
+        juna.setPaikat(24);
+        in = new Scanner(System.in);
+        int paikka = 0;
+        int i;
+        while(true) {
+            try {
+                i = 1;
+            while (i < juna.annaPaikat()) {
+
+                System.out.println("*" + i++ + " " + i++ + "   " + i++ + " " + i++ + "*");
+            }
+
+                paikka = in.nextInt();
+                return paikka;
+            } catch (InputMismatchException ex) {
+                in.nextLine();
+            }
+
+        }
+
+    }
+
 }

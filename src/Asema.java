@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class Asema {
 
-    public String nimi;
+    private final String nimi;
 
     public Asema(String nimi){
         this.nimi = nimi;
@@ -26,11 +26,11 @@ public class Asema {
      * @return
      */
 
-    public ArrayList haeAikataulut(String path, String tunniste){
+    public ArrayList<String> haeAikataulut(String tunniste){
         ArrayList<String> aikataulut = new ArrayList<>();
 
         try {
-            Scanner sc = new Scanner(new File(path));
+            Scanner sc = new Scanner(new File("./src/aikataulut/" + this.nimi + ".txt"));
             boolean found = false;
             sc.next();
             while(sc.hasNext()) {
@@ -39,34 +39,34 @@ public class Asema {
                     found = true;
                 }else if(value.equalsIgnoreCase("$")){
                     found =false;
-                }else if(found == true){
+                }else if(found){
                     aikataulut.add(value);
                 }
             }
         } catch(FileNotFoundException ie){
-            ie.printStackTrace();
+            System.out.println("Väärä polku");
         }
         return aikataulut;
     }
     //Etsii tiedostoista yhteys kaupunkien nimet
-    public ArrayList getYhteydet() {
+    public ArrayList<PaateAsema> getYhteydet() {
         Scanner scanner = null;
         Pattern pattern= Pattern.compile("[^A-Za-z-äösÄÖS]");
         String word;
-        ArrayList<PääteAsema> asemat = new ArrayList<>();
+        ArrayList<PaateAsema> asemat = new ArrayList<>();
 
         try{
             System.out.println(nimi);
             scanner = new Scanner(new File("./src/aikataulut/" + this.nimi + ".txt"));
         }catch(FileNotFoundException e){
-            System.out.println("Can't Find the File in Dictionary class!");
+            System.out.println("Polku on väärä");
         }
         scanner.nextLine();
         while(scanner.hasNext()){
             scanner.useDelimiter(pattern);
             word = scanner.next();
             if(!word.equals("")){
-                asemat.add(new PääteAsema(word));
+                asemat.add(new PaateAsema(word));
             }
         }
         return asemat;
