@@ -48,7 +48,7 @@ public class Asema {
         }
         return aikataulut;
     }
-    //Etsii tiedostoista yhteys kaupunkien nimet
+    //Etsii tiedostoista yhteyskaupunkien nimet
     public ArrayList<PaateAsema> getYhteydet() {
         Scanner scanner = null;
         Pattern pattern= Pattern.compile("[^A-Za-z-äösÄÖS]");

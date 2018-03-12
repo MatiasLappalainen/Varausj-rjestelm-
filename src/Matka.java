@@ -9,7 +9,6 @@ public class Matka {
 
     private int istumapaikka;
 
-    //Matka tallennetaan loppujenlopuksi tiedostoon varaukset.txt?
     public Matka(){
         this.aika = "";
         this.maara = 0;
