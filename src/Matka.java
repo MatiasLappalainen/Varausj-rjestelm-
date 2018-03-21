@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Matka {
 
     private Asema lahto;
@@ -41,6 +45,15 @@ public class Matka {
 
     public String annaAika(){
         return aika;
+    }
+
+    public void kirjoitaTiedostoon(String[] tiedot, String polku) throws IOException {
+        FileWriter kirjoittaja = new FileWriter(new File(polku));
+        for(String t : tiedot){
+            kirjoittaja.write(t + "\r\n");
+        }
+        kirjoittaja.flush();
+        kirjoittaja.close();
     }
 
 

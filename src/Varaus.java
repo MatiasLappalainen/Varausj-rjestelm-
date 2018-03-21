@@ -84,17 +84,36 @@ class Varaus {
         while(true) {
             try {
                 i = 1;
-            while (i < juna.annaPaikat()) {
 
+            while (i < juna.annaPaikat()) {
                 System.out.println("*" + i++ + " " + i++ + "   " + i++ + " " + i++ + "*");
             }
 
                 paikka = in.nextInt();
+            if(paikka > 0) {
                 return paikka;
+            }
             } catch (InputMismatchException ex) {
+                System.out.println("Valitse Paikka");
                 in.nextLine();
             }
+        }
+    }
 
+    public boolean jatketaankoVarausta(){
+        in = new Scanner(System.in);
+        while(true) {
+            try {
+                System.out.println("Jatketaanko varausta Kyllä/Ei");
+                String vastaus = in.nextLine();
+                if (vastaus.equalsIgnoreCase("Kyllä")) {
+                    return true;
+                } else if (vastaus.equalsIgnoreCase("ei")) {
+                    return false;
+                }
+            } catch(InputMismatchException ex){
+                in.nextLine();
+            }
         }
 
     }
