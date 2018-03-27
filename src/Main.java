@@ -61,7 +61,7 @@ public class Main {
                             }
                             else{
                                 System.out.print("\n\n\n\n\n\n\n");
-                                System.out.println("Valitsemasi paikka on varattu. Valitse toinen paikka.");
+                                System.out.println("Valitsemasi paikka on varattu.");
                             }
                         } catch (IOException e) {
                             System.out.println("Virhe paikanvalinnassa");
