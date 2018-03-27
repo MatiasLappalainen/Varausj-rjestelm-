@@ -1,6 +1,12 @@
 import java.io.File;
 import java.io.FileWriter;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.Random;
 
 public class Matka {
 
@@ -56,5 +62,42 @@ public class Matka {
         kirjoittaja.close();
     }
 
+    public boolean paikanVapaus(String lahto, String maaranpaa, String aika, int paikka, String polku) throws IOException{
+        File kansio = new File(polku);
+        File[] kansionSisalto = kansio.listFiles();
+        if(kansionSisalto ==  null){
+            return true;
+        }
+        String line;
+        for(int i = 0; i < kansionSisalto.length; i++){
+            try (BufferedReader br = new BufferedReader(new FileReader(polku + kansionSisalto[i].getName()))) {
+                if(br.readLine().equals("Lähtö: " + lahto)){
+                    if(br.readLine().equals("Määränpää: " + maaranpaa)){
+                        if(br.readLine().equals("Aika: " + aika)){
+                            if(br.readLine().equals("Istumapaikka " + Integer.toString(paikka))){
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
 
+    public String generoiTiedostonimi(String polku) {
+        Random rnd = new Random();
+        String tiedostonimi = "lippu" + rnd.nextInt(10000) + ".txt";
+        File kansio = new File(polku);
+        File[] kansionSisalto = kansio.listFiles();
+        if(kansionSisalto ==  null){
+            return tiedostonimi;
+        }
+        for(int i = 0; i < kansionSisalto.length; i++){
+            if(kansionSisalto[i].getName().equals(tiedostonimi)){
+                tiedostonimi = "lippu" + rnd.nextInt(10000) + ".txt";
+            }
+        }
+        return tiedostonimi;
+    }
 }

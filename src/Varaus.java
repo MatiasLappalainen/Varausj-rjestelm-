@@ -104,7 +104,7 @@ class Varaus {
         in = new Scanner(System.in);
         while(true) {
             try {
-                System.out.println("Jatketaanko varausta Kyllä/Ei");
+                System.out.println("Jatketaanko varausta? \n Kyllä/Ei");
                 String vastaus = in.nextLine();
                 if (vastaus.equalsIgnoreCase("Kyllä")) {
                     return true;
